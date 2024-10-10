@@ -1,16 +1,12 @@
-# This is a sample Python script.
+import bs4
+import requests
+from lxml import html
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+def webscraping_test():
+    url_base = 'http://books.toscrape.com/catalogue/page-{}.html'
 
 
-# Press the green button in the gutter to run the script.
+    for n in range(1, 11):
+        print(url_base.format(n))
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    webscraping_test()
